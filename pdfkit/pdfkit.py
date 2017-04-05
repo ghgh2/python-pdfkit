@@ -126,7 +126,7 @@ class PDFKit(object):
         args = self.command(path)
 
         result = subprocess.Popen(args, stdin=subprocess.PIPE, stdout=subprocess.PIPE,
-                                  stderr=subprocess.PIPE)
+                                  stderr=subprocess.PIPE, shell=True)
 
         # If the source is a string then we will pipe it into wkhtmltopdf.
         # If we want to add custom CSS to file then we read input file to
