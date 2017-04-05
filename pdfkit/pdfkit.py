@@ -125,7 +125,7 @@ class PDFKit(object):
     def to_pdf(self, path=None):
         args = self.command(path)
         print(args)
-        result = subprocess.Popen(args, stdin=subprocess.PIPE, stdout=subprocess.PIPE,
+        result = subprocess.Popen(" ".join(args), stdin=subprocess.PIPE, stdout=subprocess.PIPE,
                                   stderr=subprocess.PIPE, shell=True)
 
         # If the source is a string then we will pipe it into wkhtmltopdf.
