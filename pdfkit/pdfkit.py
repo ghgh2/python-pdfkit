@@ -124,7 +124,7 @@ class PDFKit(object):
 
     def to_pdf(self, path=None):
         args = self.command(path)
-
+        print(args)
         result = subprocess.Popen(args, stdin=subprocess.PIPE, stdout=subprocess.PIPE,
                                   stderr=subprocess.PIPE, shell=True)
 
